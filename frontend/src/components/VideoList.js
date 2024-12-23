@@ -7,7 +7,7 @@ const VideoList = ({ token }) => {
 
   const fetchVideos = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/videos', {
+      const res = await axios.get('https://video-management-server.vercel.app/videos', {
         headers: { Authorization: `Bearer ${token}` },
         params: { title: titleFilter },
       });
