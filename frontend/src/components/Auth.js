@@ -7,7 +7,7 @@ const Auth = ({ setUser, setToken }) => {
 
   const login = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/login', { username, password });
+      const res = await axios.post('https://video-management-server.vercel.app/login', { username, password });
       setUser(res.data.user);
       setToken(res.data.token);
       console.log(res.data.username)
