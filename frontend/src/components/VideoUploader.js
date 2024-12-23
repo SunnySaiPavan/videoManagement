@@ -6,7 +6,7 @@ const VideoUploader = ({ token }) => {
     const googleDriveUrl = prompt('Enter Google Drive video URL:');
     try {
       await axios.post(
-        'http://localhost:5000/upload',
+        'https://video-management-server.vercel.app/upload',
         { googleDriveUrl },
         { headers: { Authorization: `Bearer ${token}` } }
       );
